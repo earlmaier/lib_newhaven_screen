@@ -1,7 +1,8 @@
 #ifndef SCREEN_H_
+#define SCREEN_H_
 
 #include <stdint.h>
-#include "lib_I2C.h"
+#include "../i2c/lib_I2C.h"
 
 
 #define SCREEN_ADDR 0x50

@@ -6,7 +6,7 @@
 
 void screen_on(){
 	Screen_enum screen = SCRN_ON;
-	unsigned char cmd[2] = {COMMAND,screen} ;
+	char cmd[2] = {COMMAND,screen} ;
 	I2CSendData(SCREEN_ADDR, &(cmd[0]), sizeof(cmd));
 }
 
@@ -14,7 +14,7 @@ void screen_on(){
 
 void screen_off(){
 	Screen_enum screen = SCRN_OFF;
-	unsigned char cmd[2] = {COMMAND,screen} ;
+	char cmd[2] = {COMMAND,screen} ;
 	I2CSendData(SCREEN_ADDR, &(cmd[0]), sizeof(cmd));
 }
 
