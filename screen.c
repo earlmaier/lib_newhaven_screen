@@ -31,6 +31,21 @@ void screen_set_cursor(Cursor_enum loc){
 void screen_write_txt(char *ptr_txt, uint8_t length){
 	I2CSendData(SCREEN_ADDR, ptr_txt,length);
 }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------
+
+void screen_write_txt_line_2(char *ptr_txt, uint8_t length){
+	screen_set_cursor(SEC_3);
+	I2CSendData(SCREEN_ADDR, ptr_txt,length);
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------
+
+void screen_write_txt_sec_2(char *ptr_txt, uint8_t length){
+	screen_set_cursor(SEC_2);
+	I2CSendData(SCREEN_ADDR, ptr_txt,length);
+}
+
 //-------------------------------------------------------------------------------------------------------------------------------------------
 
 void screen_clear(){
